@@ -1,0 +1,12 @@
+﻿Ejericios
+============================================
+
+Desarrollar un programa que permite 
+obtener el tipo de cambio de soles
+a dolares.
+
+
+
+
+
+
