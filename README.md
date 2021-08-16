@@ -11,7 +11,7 @@
 
 # DOCENTE
 
-- Docente: Eric Gustavo Coronel Castillo
+- Docente: Ing. Eric Gustavo Coronel Castillo
 - Blog: www.desarrollasoftware.com
 - Canal Youtube: www.youtube.com/DesarrollaSoftware
 - Correo: ecoronel@continental.edu.pe
