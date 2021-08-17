@@ -1,9 +1,13 @@
 ﻿Ejericios
 ============================================
 
+Ejercicio 1:
+------------------------------------
 Desarrollar un programa que permite 
 obtener el tipo de cambio de soles
 a dolares.
+
+
 
 
 
