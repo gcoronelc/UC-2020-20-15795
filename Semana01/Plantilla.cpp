@@ -18,6 +18,7 @@ int main(){
 	// Reporte
 	
 	
-	system("pause")
+	// Fin
+	system("pause");
 	return 0;
 }
