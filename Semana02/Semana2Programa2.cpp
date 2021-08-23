@@ -10,7 +10,7 @@ int main( )
 	
 	// Variables
 	int numero1, numero2;
-	int Suma, Resta, Multiplica;
+	int Suma, Resta, Multiplica, Resto;
 	double Division, RaizCuad, CuboPrimer; 
 	
 	// Lectura de Datos
@@ -26,6 +26,8 @@ int main( )
 	Division = numero1 / numero2;
 	RaizCuad = sqrt(Suma);
 	CuboPrimer = pow(numero1,3);
+	Resto = numero1 % numero2;
+	
 	
 	// Reporte
 	cout << endl;
@@ -37,6 +39,7 @@ int main( )
 	cout << "La divisón es:\t\t\t\t" << Division << "\n";
 	cout << "La raiz cuadrada de la suma es:\t\t" << RaizCuad << "\n";
 	cout << "El cubo del primer numero es:\t\t" << CuboPrimer << "\n";
+	cout << "Resto de la división:\t\t\t" << Resto << "\n";
 	
 	// Fin
 	system("pause");
