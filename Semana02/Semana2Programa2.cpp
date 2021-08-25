@@ -40,6 +40,7 @@ int main( )
 	cout << "La raiz cuadrada de la suma es:\t\t" << RaizCuad << "\n";
 	cout << "El cubo del primer numero es:\t\t" << CuboPrimer << "\n";
 	cout << "Resto de la división:\t\t\t" << Resto << "\n";
+	cout << endl;
 	
 	// Fin
 	system("pause");
