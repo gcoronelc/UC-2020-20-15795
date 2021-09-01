@@ -1,3 +1,6 @@
+/*
+ * Desarrollar un programa que sume 2 numeros si son positivos.
+*/
 #include<iostream>
 using namespace std;
 
@@ -7,8 +10,8 @@ int main( )
 	setlocale(LC_CTYPE,"Spanish");
 	
 	// Variables
-	int a, b;
-	int c;
+	int a, b; // Variables para los 2 números
+	int c;    // Variable es para la suma
 	
 	// Lectura de datos
 	cout<<"Ingrese valor de primer número:\t\t"; cin>>a;

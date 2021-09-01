@@ -1,3 +1,6 @@
+/*
+ * Programa que calcula la suma o el producto de 2 números.
+ */
 #include<iostream>
 using namespace std;
 
@@ -23,7 +26,7 @@ int main( )
 	else
 	{
 		c = a * b;
-		cout<<"La multiplicación es:\t\t\t\t" << c << "\n";
+		cout<<"La multiplicación es:\t\t\t" << c << "\n";
 	}
 	
 	// Fin
