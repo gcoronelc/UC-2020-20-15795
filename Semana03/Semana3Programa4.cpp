@@ -1,3 +1,6 @@
+/*
+ * Ingresa un número y mostrar que vocal es.
+*/
 #include<iostream>
 using namespace std;
 
@@ -10,19 +13,30 @@ int main( )
 	int num;
 
 	// Lectura de datos
-	cout<<"Ingrese número:\t\t";
+	cout<<"Ingrese número: ";
 	cin>>num;
 	cout<<"\n";
 
 	// Proceso y reporte
 	switch(num)
 	{	
-	    case 1: cout<<"Vocal A"; break;
-	    case 2: cout<<"Vocal E"; break;
-	    case 3: cout<<"Vocal I"; break;
-	    case 4: cout<<"Vocal O"; break;
-	    case 5: cout<<"Vocal U"; break;
-	    default: cout<<"No es numero para vocal";
+	    case 1: 
+				cout<<"Vocal A"; 
+				break;
+	    case 2: 
+				cout<<"Vocal E"; 
+				break;
+	    case 3: 
+				cout<<"Vocal I"; 
+				break;
+	    case 4: 
+				cout<<"Vocal O"; 
+				break;
+	    case 5: 
+				cout<<"Vocal U"; 
+				break;
+	    default: 
+				cout<<"No es número para vocal";
 	}
 	
 	// Fin
