@@ -9,7 +9,7 @@ int main(){
 	int i = 10;
 	if( i=20 == 10 )
 		cout << i << endl;
-		cout << "Bien\n";
+	cout << "Bien\n";
 	
 	// Fin
 	system("pause");
