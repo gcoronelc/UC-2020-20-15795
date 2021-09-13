@@ -1,6 +1,10 @@
-// a!=b--  ===> a!=b; b--;
-// a!=--b  ===> b--;  a!=b;
+/*
 
+	while( condicion ){
+		sentencia;
+	}
+
+*/
 
 #include <iostream>
 using namespace std;
@@ -10,12 +14,12 @@ int main(){
 	// Configuracion
 	setlocale(LC_CTYPE,"Spanish");
 	
-	int a=15, b=20;
+	int i = 5;
 	
-	while(a!=b){
-		cout << "Me gusta programar." << endl;
-		b--;
+	while( i-- > 0 ){
+		cout << "Necesito aprender C++, urgente." << endl;
 	}
+	
 	cout << "El bucle finalizo." << endl;
 	
 	// Fin
