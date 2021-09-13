@@ -62,7 +62,7 @@ int main(){
 	cout << "Categoría: " << categoria << endl;			
 	cout << "Importe: " << importe << endl;			
 	cout << "Descuento: " << descuento << endl;			
-	cout << "Total a pagar: " << totalPagar << endl;			
+	cout << "Total a pagar: " << totalPagar << endl;				
 			
 	// Fin
 	system("pause");
