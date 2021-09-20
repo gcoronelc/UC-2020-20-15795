@@ -8,6 +8,7 @@ int main(){
 	
 	// Variables
 	int opMenu;
+	int base, altura, areaTriangulo;
 	
 	// Control del menú de opciones
 	do{
@@ -32,9 +33,25 @@ int main(){
 		// Procesar opción del menú
 		system("cls");
 		switch(opMenu){
-			// Opción 1: aaaa
+			// Opción 1: AREA DE UN TRIANGULO
 			case 1:
-				cout << "Proceso opción 1" << endl;
+				// Cabecera
+				cout << "============================" << endl;
+				cout << "AREA DE UN TRIANGULO" << endl;
+				cout << "============================" << endl;
+				cout << endl;
+				// Lectura
+				cout << "Lectura de datos" << endl;
+				cout << "------------------------------" << endl;
+				cout << "Base: "; cin >> base;
+				cout << "Altura: "; cin >> altura;
+				// Proceso
+				areaTriangulo = base * altura / 2;
+				// Reporte
+				cout << endl;
+				cout << "Reporte" << endl;
+				cout << "------------------------------" << endl;
+				cout << "Area: " << areaTriangulo << endl;
 				break;
 			// Opción 2: bbbbb
 			case 2:
@@ -54,6 +71,7 @@ int main(){
 				break;
 		}
 		
+		cout << endl;
 		system("pause");
 	} while(opMenu<5);
 	
