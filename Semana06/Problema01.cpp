@@ -9,6 +9,7 @@ int main(){
 	// Variables
 	int opMenu;
 	int base, altura, areaTriangulo;
+	double radio, areaCircunferencia;
 	
 	// Control del menú de opciones
 	do{
@@ -33,8 +34,8 @@ int main(){
 		// Procesar opción del menú
 		system("cls");
 		switch(opMenu){
-			// Opción 1: AREA DE UN TRIANGULO
-			case 1:
+			
+			case 1: // Opción 1: AREA DE UN TRIANGULO
 				// Cabecera
 				cout << "============================" << endl;
 				cout << "AREA DE UN TRIANGULO" << endl;
@@ -53,16 +54,47 @@ int main(){
 				cout << "------------------------------" << endl;
 				cout << "Area: " << areaTriangulo << endl;
 				break;
-			// Opción 2: bbbbb
-			case 2:
-				cout << "Proceso opción 2" << endl;
+			
+			case 2: // Opción 2: Area de una circunferencia
+				// Cabecera
+				cout << "============================" << endl;
+				cout << "AREA DE UNA CIRCUNFERENCIA" << endl;
+				cout << "============================" << endl;
+				cout << endl;
+				// Lectura
+				cout << "Lectura de datos" << endl;
+				cout << "------------------------------" << endl;
+				cout << "Radio: "; cin >> radio;
+				// Proceso
+				areaCircunferencia = 3.14159265 * radio * radio;
+				// Reporte
+				cout << endl;
+				cout << "Reporte" << endl;
+				cout << "------------------------------" << endl;
+				cout << "Area: " << areaCircunferencia << endl;
 				break;	
-			// Opción 3: cccccccc
-			case 3:
+			
+			case 3: // Opción 3: Area de un Rectangulo
+				// Cabecera
+				cout << "============================" << endl;
+				cout << "AREA DE UN RECTANGULO" << endl;
+				cout << "============================" << endl;
+				cout << endl;
+				// Lectura
+				cout << "Lectura de datos" << endl;
+				cout << "------------------------------" << endl;
 				cout << "Proceso opción 3" << endl;
 				break;					
-			// Opción 4: dddddddd
-			case 4:
+			
+			case 4: // Opción 4: TERMINO N DE FIBONACCI
+				// Cabecera
+				cout << "============================" << endl;
+				cout << "TERMINO N DE FIBONACCI" << endl;
+				cout << "============================" << endl;
+				cout << endl;
+				// Lectura
+				cout << "Lectura de datos" << endl;
+				cout << "------------------------------" << endl;
 				cout << "Proceso opción 4" << endl;
 				break;
 			// Opción 5: Salir
