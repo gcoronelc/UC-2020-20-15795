@@ -6,8 +6,15 @@ int main(){
 	// Configuracion
 	setlocale(LC_CTYPE,"Spanish");
 	
+	// Constantes
+	const double TC_DOLARES = 4.11;
+	const double TC_EURO = 4.83;
+	const double TC_EURO = 5.61;
+	
 	// Variables
-	int opMenu;
+	int opMenu, tipoCambio;
+	double importe, cambio;
+	string etiquetaReporte;
 	
 	// Control del menú de opciones
 	do{
@@ -31,24 +38,57 @@ int main(){
 		// Procesar opción del menú
 		system("cls");
 		switch(opMenu){
-			// Opción 1: aaaa
-			case 1:
-				cout << "Proceso opción 1" << endl;
+			
+			case 1: // Opción 1: Cambio en Dólar a Soles y Viceversa
+				// Cabecera
+				cout << "OPCION 1: Cambio en Dólar a Soles y Viceversa" << endl;
+				cout << "====================================================" << endl;
+				// Leer el tipo de cambio
+				cout << endl;
+				cout << "TIPO DE CAMBIO" << endl;
+				cout << "1.- Dolares a Soles" << endl;
+				cout << "2.- Soles a Dolares" << endl;
+				do{
+					cout << "Opción ==> "; cin >> tipoCambio;
+					if(tipoCambio != 1 && tipoCambio != 2){
+						cout << "ERROR: eliga la opción correcta." << endl;
+					}
+				}while(tipoCambio != 1 && tipoCambio != 2);
+				// Leer el importe
+				cout << endl;
+				cout << "Importe a cambiar: "; cin >> importe;
+				// Proceso
+				switch(tipoCambio){
+					case 1:
+						cambio = importe * TC_DOLARES;
+						etiquetaReporte = "Su cambio en Soles es: ";
+						break;
+					case 2:
+						cambio = importe / TC_DOLARES;
+						etiquetaReporte = "Su cambio en Dolares es: ";
+						break;						
+				}
+				// Reporte
+				cout << endl;
+				cout << "Reporte" << endl;
+				cout << "----------------------------------------------------" << endl;					
+				cout << etiquetaReporte << cambio << endl;
 				break;
-			// Opción 2: bbbbb
-			case 2:
+			
+			case 2: // Opción 2: Cambio en Euros a Soles y Viceversa
 				cout << "Proceso opción 2" << endl;
 				break;	
-			// Opción 3: cccccccc
-			case 3:
+			
+			case 3: // Opción 3: Cambio en Libras Esterlinas a Soles y Viceversa
 				cout << "Proceso opción 3" << endl;
 				break;					
-			// Opción 4: Salir
-			case 4:
+			
+			case 4: // Opción 4: Salir
 				cout << "Fin del programa." << endl;
 				break;
 		}
 		
+		cout << endl;
 		system("pause");
 	} while(opMenu<4);
 	
