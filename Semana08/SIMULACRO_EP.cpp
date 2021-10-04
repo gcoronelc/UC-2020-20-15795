@@ -120,6 +120,9 @@ int main(){
 				cout << "Descuento 1: " << descuento1 << endl;
 				cout << "Descuento 2: " << descuento2 << endl;
 				cout << "Importe neto: " << importeNeto << endl;
+				// Contadores
+				
+				// Acumuladores
 				
 				break;
 				
