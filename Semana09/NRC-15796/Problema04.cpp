@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+
 void cabecera(){
 	system("cls");
 	cout << "PROBLEMA 04" << endl;
