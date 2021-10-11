@@ -29,6 +29,7 @@ int mayor(int n1, int n2, int n3){
 	return elMayor;
 }
 
+// Hay un proble, quien lo identifica.
 double promedio (int n1, int n2, int n3){
 	double elPromedio;
 	// Proceso: Inicio
