@@ -12,7 +12,9 @@ float promedioFinal (int C1, int EP, int C2, int EF){
 string condicion(float nota){
 	string estado;
 	// Proceso: Inicio
-	estado = "En proceso";
+	estado = "El curso te reclama.";
+	estado = (nota>=10.5 && nota<15.0)?"Aprobado":estado;
+	estado = (nota>=15.0)?"Con honores":estado;
 	// Proceso: Fin
 	return estado;
 }
@@ -29,7 +31,7 @@ int main(){
 	
 	// Lectura de datos
 	cout << "LECTURA DE DATOS" << endl;
-	cout << "======================================" << endl;
+	cout << "========================================================" << endl;
 	cout << "Consolidado 1: "; cin >> notaC1;
 	cout << "Examen Parcial: "; cin >> notaEP;
 	cout << "Consolidado 2: "; cin >> notaC2;
@@ -42,7 +44,7 @@ int main(){
 	// Reporte
 	cout << endl;
 	cout << "REPORTE" << endl;
-	cout << "======================================" << endl;
+	cout << "========================================================" << endl;
 	cout << "Promedio Final: " << notaPromedio << endl;
 	cout << "Condición del estudiante: " << condEstudiante << endl;
 	cout << endl;
