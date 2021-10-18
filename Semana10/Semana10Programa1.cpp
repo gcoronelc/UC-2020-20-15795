@@ -1,58 +1,62 @@
 #include <iostream>
 using namespace std;
 
-float leeDatoFloat()
+/*
+Lee un dato tipo float.
+*/
+float leedatof()
 {
 	float dato;
-	cin>>dato;
+	cin >> dato;
 	return dato;	
 }
 
-int leeDatoEntero()
+/*
+Lee un dato tipo entero.
+*/
+int leedatoe()
 {
 	int dato;
 	cin>>dato;
 	return dato;	
 }
 
-void procHerencia()
+void herencia()
 {
-	float herencia, herenciaHijo, herenciaMayor;
-	int hijos;
+	float her, may;
+	int cant;
 
 	do{
-		cout << "Ingresar importe de herencia: ";
-		herencia = leeDatoFloat();
-		if (herencia<=0){
-			cout << "ERROR. La herencia debe ser mayor a 0." << endl;
-		}
-	} while (herencia<=0);
+		cout << "Ingresar importe de herencia:\t";
+		her = leedatof();
+		if (her <=0)
+			cout << "ERROR.La herencia debe ser mayor a 0";
+	} while (her <=0);
 
 	do{
-		cout << "Ingresar cantidad de hijos: ";
-		hijos = leeDatoEntero();
-		if (hijos<= 0){
-			cout << "ERROR. La cantidad debe ser mayor a 0." << endl;
-		}
-	} while (hijos<= 0);
-	if (hijos<4)
+		cout << "Ingresar cantidad de hijos:\t";
+		cant = leedatoe();
+		if (cant <= 0)
+			cout << "ERROR.La cantidad debe ser mayor a 0";
+	} while (cant <= 0);
+
+	if (cant < 4)
 	{	
-		herenciaHijo = herencia / hijos;
-		cout << "La herencia a cada hijo es: " << herenciaHijo << endl;
-
+		her = her / cant;
+		cout << "La herencia a cada hijo es:\t" << her << endl;
 	}
 	else
 	{
-		herenciaMayor = herencia / 2;
-		herenciaHijo = herenciaMayor / (hijos - 1);
-		cout << "\nLa herencia del hermano mayor es: " << herenciaMayor;
-		cout << "\nLa herencia de los demas hijos es: " << herenciaHijo;
+		may = her / 2;
+		her = may / (cant - 1);
+		cout << "\nLa herencia del hermano mayor es: " << may;
+		cout << "\nLa herencia de los demas hijos es: " << her;
 	}
 }
 
 int main()
 {
-	procHerencia();
+	herencia();
 	return 0;
 }
 
