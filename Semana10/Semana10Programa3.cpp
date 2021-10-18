@@ -1,68 +1,68 @@
 #include <iostream>
 using namespace std;
 
-// Declaración global
-int cont = 0, mayor, menor, dato;   
+// declaracion global
+int cont = 0, may, men, dato;   
 char rpta;
 
-int leeDatoEntero()
+int leedatoe()
 {
 	int dato;
 	cin>>dato;
 	return dato;	
 }
 
-char leeDatoChar()
+char leedatoc()
 {
 	char dato;
 	cin>>dato;
-	dato = toupper(dato);
 	return dato;	
 }
 
 void Mostrar()
 {
-	cout << "El mayor es: " << mayor << endl;
-	cout << "El menor es: " << menor << endl;
+	cout<<"\nEl mayor es:\t" << may <<"\n";
+	cout<<"\nEl menor es:\t" << men <<"\n";
 }
 
-void procMayorMenor()
+void MayorMenor()
 {
 	do{
-		cout<<"Ingrese valor: ";
-		dato = leeDatoEntero();
+		cout<<"\nIngrese valor:\t";
+		dato = leedatoe();
 		
 		cont = cont + 1;  // cont++;
 		
 		if(cont == 1)
 		{
-			mayor = dato;
-			menor = dato;		
+			may = dato;
+			men = dato;		
 		}
 		else
-			if(dato > mayor)
-				mayor = dato;
+			if(dato > may)
+				may = dato;
 			else
-				if(dato < menor)
-					menor = dato;
+				if(dato < men)
+					men = dato;
 	
 		do{
-			cout<<"Desea ingresar otros numero? (S/N):";
-			rpta = leeDatoChar();
+			cout<<"\nDesea ingresar otros numero? (Ss - Nn):\t";
+			rpta = leedatoc();
 			
-			if(rpta != 'S' && rpta != 'N')
-				cout << "ERROR. Vuelva a ingresar S o N." << endl;
+			if(rpta != 'S' && rpta != 's' && rpta != 'N' && rpta != 'n')
+				cout<<"\nERROR. Vuelva a ingresar S o s o N o n.\n";
 			
-		}while(rpta != 'S' && rpta != 'N');
+		}while(rpta != 'S' && rpta != 's' && rpta != 'N' && rpta != 'n' );
 		
-	}while(rpta == 'S');
+	}while(rpta == 'S' || rpta == 's');
 	
 	Mostrar();
 }
 
 int main()
 {
-	procMayorMenor();
+	MayorMenor();
+	
 	return 0;	
 }
 
