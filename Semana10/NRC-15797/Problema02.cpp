@@ -59,10 +59,12 @@ Retorna:
    0 => Si el triángulo no existe.
 */
 int verificarExistencia(int a, int b, int c){
-	int existe;
+	int existe, existe_a, existe_b, existe_c;
 	// Proceso: Inicio
-	existe = -1;
-	// .....
+	existe_a = (a>abs(b-c) && a<(b+c))?1:0;
+	existe_b = (b>abs(a-c) && b<(a+c))?1:0;
+	existe_c = (c>abs(a-b) && c<(a+b))?1:0;
+	existe = ((existe_a + existe_b + existe_c) == 3)?1:0;
 	// Proceso: Fin
 	return existe;
 }
