@@ -1,6 +1,6 @@
 #include <iostream>
-#include <LibreriaEGCC.h>
-#include <CalculadoraBasica.h>
+#include "CalculadoraBasica.h"
+#include "LibreriaEGCC.h"
 using namespace std;
 
 // Crear menú
