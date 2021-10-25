@@ -1,8 +1,14 @@
+/*
+Fase 1: Estructura de la solución
+*/
 #include <iostream>
 #include "LibreriaLectura01.h"
 using namespace std;
 
 void procMostrarMenu();
+void calcPension();
+void listado();
+void resumen();
 
 int main(){
 	
@@ -16,15 +22,24 @@ int main(){
 		procMostrarMenu();
 		opMenu = leerOpcion(1,4);
 		
-		cout << endl;
-		cout << "En construcción" << endl;
-		cout << endl;
-		system("pause");
+		switch(opMenu){
+			case 1:
+				calcPension();
+				break;
+			case 2:
+				listado();
+				break;
+			case 3:
+				resumen();
+				break;
+		}
 		
+		if(opMenu!=4){
+			system("pause");
+		}
 	}while(opMenu!=4);
 	
 	// Fin
-	system("pause");
 	return 0;
 }
 
@@ -39,5 +54,21 @@ void procMostrarMenu(){
 	cout << "4.- Salir" << endl;
 }
 
+void calcPension(){
+		cout << endl;
+		cout << "En construcción" << endl;
+		cout << endl;
+}
 
+void listado(){
+		cout << endl;
+		cout << "En construcción" << endl;
+		cout << endl;
+
+}
+void resumen(){
+		cout << endl;
+		cout << "En construcción" << endl;
+		cout << endl;
+}
 
