@@ -4,12 +4,17 @@
 #include "LecturaDatos.h"
 using namespace std;
 
+// Variables globales
+int cantVentas1, cantVentas2, cantVentas3, cantVentas4;
+float acuDcto1, acuDcto2, acuDcto3, acuDcto4;
 
 // Procesos principales
 void procVenta();
 void procListado();
 void procReporte();
 void procSalir();
+void inicializarVariables();
+void actualizarVariablesGlobales(int porcDcto, int cantidad, float dcto);
 
 int main(){
 	// Configuracion
@@ -17,6 +22,7 @@ int main(){
 	// Variables
 	int opMenu;
 	// Proceso principal
+	inicializarVariables();
 	do{
 		// Menu
 		mostrarMenu();
@@ -66,6 +72,8 @@ void procVenta(){
 	porcDcto = obtenerPorcDcto(cantidad);
 	dcto = importe * porcDcto / 100;
 	neto = importe - dcto;
+	// Actualizar variables globales
+	actualizarVariablesGlobales(porcDcto,cantidad,dcto);
 	// Reporte
 	cout << endl;
 	cout << "SISTEMA DE VENTAS" << endl;
@@ -85,7 +93,16 @@ void procListado(){
 
 // Proceso Reporte
 void procReporte(){
-	cout << "Reporte en construcción" << endl;
+	cout << endl;
+	cout << "SISTEMA DE VENTAS" << endl;
+	cout << "Reporte de venta" << endl;
+	cout << "==============================" << endl;
+	cout << "TIPO DE DESCUENTO    \tPORCENTAJE\tVENTAS\tIMPORTE" << endl;
+	cout << "MAS DE 100           \t   4%     \t" << cantVentas1 << "\t" << acuDcto1 << endl;
+	cout << "MAS DE 25 HASTA 100  \t   2%     \t" << cantVentas2 << "\t" << acuDcto2 << endl;
+	cout << "MAS DE 10 HASTA 25   \t   1%     \t" << cantVentas3 << "\t" << acuDcto3 << endl;
+	cout << "HASTA 10             \t   0%     \t" << cantVentas4 << "\t" << acuDcto4 << endl;
+	cout << endl;	
 }
 
 // Proceso Salir
@@ -96,4 +113,26 @@ void procSalir(){
 	cout << endl;
 }
 
+void inicializarVariables(){
+	cantVentas1 = 0;
+	cantVentas2 = 0;
+	cantVentas3 = 0;
+	cantVentas4 = 0;
+	acuDcto1 = 0.0;
+	acuDcto2 = 0.0;
+	acuDcto3 = 0.0;
+	acuDcto4 = 0.0;
+}
 
+void actualizarVariablesGlobales(int porcDcto, int cantidad, float dcto){
+	// Cantidad de ventas
+	cantVentas1 += (porcDcto==4)?cantidad:0;
+	cantVentas2 += (porcDcto==2)?cantidad:0;
+	cantVentas3 += (porcDcto==1)?cantidad:0;
+	cantVentas4 += (porcDcto==0)?cantidad:0;
+	// Acumulado de descuentos
+	acuDcto1 += (porcDcto==4)?dcto:0;
+	acuDcto2 += (porcDcto==2)?dcto:0;
+	acuDcto3 += (porcDcto==1)?dcto:0;
+	acuDcto4 += (porcDcto==0)?dcto:0;
+}
