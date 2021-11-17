@@ -1,5 +1,5 @@
 /*
-Realizar un programa recursivo que permita hacer la división por restas sucesivas
+Realizar un programa recursivo que permita hacer la división por restas sucesivas.
 */
 
 #include <iostream>
@@ -13,7 +13,6 @@ int divisionPorRestas(int a, int b) {
 		return divisionPorRestas(a-b, b) + 1;
 	}
 }
-
 
 int main(){
 	// Configuracion
