@@ -1,5 +1,5 @@
 #include <iostream>
-#include "LecturaDatosV2.h"
+#include "LecturaDatosV3.h"
 using namespace std;
 
 int main(){
@@ -12,8 +12,8 @@ int main(){
 	
 	// Lectura de datos
 	cout << "LECTURA DE DATOS" << endl;
-	cout << "Precio: "; 
-	precio = leeDatoFoat();
+	cout << "========================" << endl;
+	precio = leeDatoFloatPositivo("Precio: ");
 	
 	
 	// Proceso

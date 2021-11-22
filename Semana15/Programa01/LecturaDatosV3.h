@@ -34,7 +34,9 @@ int leeDatoEnteroPositivo(string etiqueta)
 	return dato;
 }
 
-float leeDatoFoat()
+// Lee un dato float.
+// Si el usuario ingresa una cadena, muestra un mensaje de error.
+float leeDatoFloat()
 {
 	float dato;
 	string cadena;
@@ -48,8 +50,45 @@ float leeDatoFoat()
 	return dato;
 }
 
+// Lee un dato float.
+// Si el usuario ingresa una cadena, muestra un mensaje de error.
+// Maneja la etiqueta del dato.
+float leeDatoFloat(string etiqueta)
+{
+	float dato;
+	string cadena;
+	do{
+		cout << etiqueta; cin >> cadena;
+		if (isalpha(cadena[0])){
+			cout << "Error, ingrese un número." << endl;
+		}
+	}while(isalpha(cadena[0]));
+	dato = atof(cadena.c_str());
+	return dato;
+}
 
-
+// Lee un dato float positivo, mayor que cero.
+// Si el usuario ingresa una cadena, muestra un mensaje de error.
+// Si el usuario ingresa un valor negativo, muestra un mensaje de error.
+// Maneja la etiqueta del dato.
+float leeDatoFloatPositivo(string etiqueta)
+{
+	float dato = -1;
+	string cadena;
+	do{
+		cout << etiqueta; cin >> cadena;
+		if (isalpha(cadena[0])){
+			cout << "Error, ingrese un número." << endl;
+			continue;
+		}
+		dato = atof(cadena.c_str());
+		if (dato<=0){
+			cout << "Error, ingrese un número positivo." << endl;
+			continue;
+		}		
+	}while(dato<=0);
+	return dato;
+}
 
 double leeDatoDouble()
 {
