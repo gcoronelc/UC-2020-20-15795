@@ -3,10 +3,39 @@
 #include<string>
 using namespace std;
 
-int leeDatoEntero()
+// Lee un entero.
+// Si el usuario ingresa un dato incorrecto, muestra un mensaje.
+int leeDatoEntero(string etiqueta)
 {
 	int dato;
-	cin>> dato;
+	string cadena;
+	do{
+		cout << etiqueta; cin >> cadena;
+		if (isalpha(cadena[0])){
+			cout << "Error, ingrese un número entero." << endl;
+		}
+	}while(isalpha(cadena[0]));
+	dato = atoi(cadena.c_str());
+	return dato;
+}
+
+// Lee un entero positivo.
+// Si el usuario ingresa un dato incorrecto, muestra un mensaje.
+int leeDatoEnteroPositivo(string etiqueta)
+{
+	int dato;
+	string cadena;
+	do{
+		cout << etiqueta; cin >> cadena;
+		if (isalpha(cadena[0])){
+			cout << "Error, ingrese un número entero." << endl;
+			continue;
+		}
+		dato = atoi(cadena.c_str());
+		if(dato<1){
+			cout << "Valor incorrecto, ingrese un número positivo." << endl;
+		}
+	} while(dato<1);
 	return dato;
 }
 
@@ -22,17 +51,7 @@ int leeDatoEntero(string etiqueta, int valorMinimo, int valorMaximo)
 	return dato;
 }
 
-int leeDatoEnteroPositivo(string etiqueta)
-{
-	int dato;
-	do{
-		cout << etiqueta; cin >> dato;
-		if(dato<1){
-			cout << "Valor incorrecto." << endl;
-		}
-	} while(dato<1);
-	return dato;
-}
+
 
 // Lee un dato float.
 // Si el usuario ingresa una cadena, muestra un mensaje de error.
